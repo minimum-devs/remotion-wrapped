@@ -16,7 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-      - uses: actions/setup-node@main
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
       - run: sudo apt update
       - run: sudo apt install ffmpeg
       - run: npm i
